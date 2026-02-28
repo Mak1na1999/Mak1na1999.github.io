@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTMFContacts Portal</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #0f0c29; /* Deep space dark blue */
+            color: white;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated Background Layer */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+            overflow: hidden;
+        }
+
+        /* Phone Elements */
+        .floating-phone {
+            position: absolute;
+            font-size: 3rem;
+            user-select: none;
+            filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.5));
+        }
+
+        /* Old Landlines - Drifting aimlessly */
+        .old-gen {
+            opacity: 0.4;
+            animation: drift 20s infinite linear;
+        }
+
+        /* Smartphones - Chasing the old tech */
+        .new-gen {
+            opacity: 0.8;
+            animation: chase 12s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+        }
+
+        @keyframes drift {
+            0% { transform: translate(-10vw, 10vh) rotate(0deg); }
+            100% { transform: translate(110vw, 90vh) rotate(360deg); }
+        }
+
+        @keyframes chase {
+            0% { transform: translate(-20vw, 50vh) scale(0.8); }
+            50% { transform: translate(50vw, 20vh) scale(1.1); }
+            100% { transform: translate(120vw, 60vh) scale(0.8); }
+        }
+
+        /* Title Styling */
+        h1 {
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            margin: 50px 0;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            font-weight: 900;
+            text-shadow: 0 0 20px #00d2ff, 0 0 40px #3a7bd5;
+            text-align: center;
+        }
+
+        /* 2x2 Image Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 900px;
+            width: 95%;
+            margin-bottom: 60px;
+            z-index: 10;
+        }
+
+        .tile {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .tile:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #00d2ff;
+            box-shadow: 0 15px 45px rgba(0, 210, 255, 0.3);
+        }
+
+        .tile img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* Responsive Mobile View */
+        @media (max-width: 700px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+            h1 { font-size: 3rem; letter-spacing: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-animation">
+        <div class="floating-phone old-gen" style="top: 15%; left: -10%; animation-delay: 0s;">☎️</div>
+        <div class="floating-phone old-gen" style="top: 60%; left: -10%; animation-delay: -5s;">📞</div>
+        
+        <div class="floating-phone new-gen" style="top: 20%; left: -20%; animation-delay: 2s;">📱</div>
+        <div class="floating-phone new-gen" style="top: 70%; left: -20%; animation-delay: -3s;">🤳</div>
+    </div>
+
+    <h1>DTMFContacts</h1>
+
+    <div class="grid-container">
+        <div class="tile">
+            <img src="resources/DTMFContacts1.jpeg" alt="Sync and Info Screen">
+        </div>
+
+        <div class="tile">
+            <img src="resources/DTMFContacts2.jpeg" alt="Manual DTMF Dialer">
+        </div>
+
+        <div class="tile">
+            <img src="resources/DTMFContacts3.jpeg" alt="Smart Contact Integration">
+        </div>
+
+        <div class="tile">
+            <img src="resources/DTMFContacts4.jpeg" alt="Dialer Selection Popup">
+        </div>
+    </div>
+
+</body>
+</html>
