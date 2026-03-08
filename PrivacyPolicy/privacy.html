@@ -3,57 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | DTMFContacts</title>
+    <title>Privacy Policy - DTMFContacts</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: #f4f7f9; }
-        .container { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #34495e; margin-top: 30px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        .highlight-box {
+            background-color: #e8f4fd;
+            border-left: 5px solid #2980b9;
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
         ul { padding-left: 20px; }
-        .last-updated { font-size: 0.9em; color: #7f8c8d; margin-bottom: 30px; }
-        .footer { text-align: center; margin-top: 40px; font-size: 0.8em; color: #bdc3c7; }
-        .link { color: #3498db; text-decoration: none; }
+        li { margin-bottom: 10px; }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        a { color: #2980b9; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Privacy Policy</h1>
-    <p class="last-updated">Last Updated: March 2026</p>
+    <h1>Privacy Policy for DTMFContacts</h1>
+    <p><strong>Effective Date:</strong> March 8, 2026</p>
+    <p><strong>Developer:</strong> Mak1na</p>
 
-    <p>This Privacy Policy describes how <strong>Mak1na</strong> (Author of the App) handles data in the <strong>DTMFContacts</strong> mobile application.</p>
+    <p>This Privacy Policy describes how <strong>DTMFContacts</strong> ("the App") handles user data. Our priority is to provide a local utility for generating DTMF tones while ensuring your personal information remains private and secure.</p>
 
-    <h2>1. Permissions and Sync Adapter</h2>
-    <p>To provide core functionality as a DTMF dialer integrated with your system, our app requires:</p>
+    <h2>1. Permissions and Functional Necessity</h2>
+    <p>To provide core functionality as a DTMF dialer integrated with your system, the App requires the following permissions:</p>
     <ul>
-        <li><strong>GET_ACCOUNTS:</strong> To create a local Sync Account so our app icon appears in your system contacts.</li>
-        <li><strong>READ_CONTACTS:</strong> To allow you to pick numbers for tone generation.</li>
-    </ul>
-
-    <h2>2. Advertising (AdMob)</h2>
-    <p>Our app uses <strong>Google AdMob</strong> to display advertisements. AdMob may collect and use certain data to serve relevant ads to you, including:</p>
-    <ul>
-        <li><strong>Google Advertising ID:</strong> A unique, resettable ID used for personalized advertising.</li>
-        <li><strong>Device Information:</strong> Such as IP address, device model, and OS version.</li>
-        <li><strong>Interaction Data:</strong> App launches, ad clicks, and impressions.</li>
-    </ul>
-    <p>For more information, please visit <a class="link" href="https://policies.google.com/technologies/ads" target="_blank">How Google uses data when you use our partners' sites or apps</a>.</p>
-
-    <h2>3. Data Handling and Security</h2>
-    <p>While AdMob handles data for advertising, our app does <strong>not</strong> collect or store your personal contact information on any external servers. All contact-related tasks are processed locally on your device We access contacts locally to generate tones; no contact data is collected or stored by the developer, though third-party ads may collect device and approximate location data for advertising purposes.</p>
-
-    <h2>4. Opt-Out Options</h2>
-    <p>You can opt out of personalized advertising by visiting your device's <strong>Google Settings > Ads</strong> and selecting "Delete advertising ID" or "Reset advertising ID."</p>
-
-    <h2>5. Contact Us</h2>
-    <p>Email: <strong> homemagic4u@gmail.com</strong></p>
-</div>
-
-<div class="footer">
-    &copy; 2026 Mak1na. All rights reserved.
-</div>
-
-</body>
-</html>
-
-
+        <li><strong>READ_CONTACTS:</strong> This is used solely to allow you to select a phone number from your contact list to generate the corresponding DTMF tones.</li>
+        <li><strong>GET_ACCOUNTS / Sync Adapter:</strong> This is used to create a local-only Sync Account. This integration allows the App’s functionality to appear within your system's native contact entries
